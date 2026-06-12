@@ -1,0 +1,6 @@
+{
+  "Name": "IDA_VendorFlow",
+  "ProjectType": "Process",
+  "Description": "UiPath Attended Automation for Vendor Master Data Creation",
+  "MainFile": "Main.xaml"
+}
