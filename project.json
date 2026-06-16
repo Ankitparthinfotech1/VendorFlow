@@ -11,7 +11,7 @@
     "UiPath.Mail.Activities": "2.7.10",
     "UiPath.System.Activities": "[26.4.1-preview]",
     "UiPath.UIAutomation.Activities": "[26.4.2-preview]",
-    "UiPath.WebAPI.Activities": "[1.16.2]"
+    "UiPath.WebAPI.Activities": "[2.5.0-preview]"
   },
   "webServices": [],
   "entitiesStores": [],

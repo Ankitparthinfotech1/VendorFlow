@@ -115,6 +115,7 @@
                 "push": 0
               }
             ],
+            "autoAdjust": true,
             "key": "vendorActionColumns",
             "type": "columns",
             "input": false,
@@ -137,7 +138,7 @@
               {
                 "label": "",
                 "tableView": false,
-                "key": "vendorSelect",
+                "key": "IsSelected",
                 "type": "checkbox",
                 "input": true,
                 "defaultValue": false
@@ -211,6 +212,14 @@
                 "disabled": true,
                 "tableView": true,
                 "key": "Country",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "label": "Status",
+                "disabled": true,
+                "tableView": true,
+                "key": "Status",
                 "type": "textfield",
                 "input": true
               }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="1uBxTPsdIU6P-7pjzzS4Lw" Reference="t1R5nDm_3EiWiJvQf0Y86g/7RhdIAlm8EqGP1UG0aSlSw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-8, -8, 1936, 1048" ContentHash="ju1z2y1VXk2303u7uQ_FSw" FilePath="C:\Program Files\Microsoft Office\root\Office16\outlook.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKgSURBVFhH7ZfRS1NRHMdXtzXSom13ZARGjsWsh/6DoJcIYoQJZURhE0ukWHvUsNKKqblKrBAGpQ+OJpFBYRiFy1qRElzKjbWwBhEKeyiIIOjlG2ftXrff2d3d2F0P0Re+cHZ2+H0/u+d377kzGP6rSAmtU5LQOgWdLNH6mspTpCzT+pqiBco1ra+tjijUXB9Kqbohgbym5bWVJ/jvApyahpq3BuJccPEAHVGJ/qKi7XkBg6sXjuF3XHApAHzhUrz7TOUAdgWSadP5igKYu+MYefMNVGyOfUfXr9zp+dMLFCxjCiRbFUBa/KmEsjH9TCF0BTh294sSxsbyPNsGWd6HS5UDCH/8kQ65H/vOFZK3ha3RA6DK2eblAOTL3f00xRVic0xsjU4AzFIOQPLrr4oDOMcWUdc3i+odp2Fuf4C8W8AuNy2ktgXC9v0QDge5w0Y5dLJh28MwNo6iuu0RxP73sA0mcwFYg8lSa8Ls+WIBVnheYVXTHaxpnoDl0nw6WHbJtyFdL2xrUAc4/hjCkQmYmoJY3zWXE6wKUOqDaLVjL4yu6xBaJpeDWyZhPDAGk2sY67zTXGhBgGwX8yjecPQCLM0jMO0ZgvHQeNpsvNZ9D+LABy6QuiBAMa5x+9Jngf1mAmb3OKoO3oa58znEyzHYri5wgdRlHceC95kCIN9mdYEF2HoisJ5/CbH3LcSBOGzXPnHBywAasu47CTWLjV5sPOHPexrWDkVhPTcDa89riH3zEP0J2AZ5EJrHqbYzBC2rvRE5g0vY5Jdg6QrDenEOYn8Mtiu5fUHzOG3xPUEh2/0RLpjaMfoZNb5ZWM7OQPRJOf1B8zjRYuXYfiuZ6Y+I0h80jxMtooc334gr/UHzONWHUhItoIcz/VH6X7R/Tr8BAix/kTrz6dgAAAAASUVORK5CYII=" Reference="t1R5nDm_3EiWiJvQf0Y86g/7RhdIAlm8EqGP1UG0aSlSw" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' /&gt;" Version="V3">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="e35ab02c5ce590dd23a602aef6110e31.jpg" xmlns="">0OgSGCUE2bESENBbtbBZ55Q</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>
