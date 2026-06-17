@@ -1,6 +1,6 @@
-{
+﻿{
   "Metadata": {
-    "Id": "89d254d9-4e4e-495d-92c3-5e3c491a1a1b",
+    "Id": "fd4b6c51-e237-4aa5-ab10-30369434fe53",
     "Kind": "FormIo"
   },
   "DesignProperties": {
@@ -10,7 +10,7 @@
     "Theme": "Sandstone",
     "ShowInTaskbar": true,
     "ShowMargin": true,
-    "CustomStyle": "/* Status-cell base style to override theme's disabled opacity */\n.status-cell .form-control[disabled],\n.status-cell .form-control[readonly] {\n    opacity: 1;\n    -webkit-text-fill-color: currentcolor; /* Ensures text color is not washed out on some browsers */\n}\n\n/* Pending */\n.status-pending .form-control,\n.status-pending .form-control[disabled],\n.status-pending .form-control[readonly] {\n    background-color: #fff3cd !important;\n    color: #856404 !important;\n    border-color: #ffc107 !important;\n}\n\n/* Success */\n.status-success .form-control,\n.status-success .form-control[disabled],\n.status-success .form-control[readonly] {\n    background-color: #d4edda !important;\n    color: #155724 !important;\n    border-color: #28a745 !important;\n}\n\n/* Failed */\n.status-failed .form-control,\n.status-failed .form-control[disabled],\n.status-failed .form-control[readonly] {\n    background-color: #f8d7da !important;\n    color: #721c24 !important;\n    border-color: #dc3545 !important;\n}"
+    "CustomStyle": "/* Pending */\r\n.status-pending,\r\n.status-pending input,\r\n.status-pending input[disabled],\r\n.status-pending input[readonly],\r\n.status-pending input:focus,\r\n.status-pending .form-control,\r\n.status-pending .form-control:disabled,\r\n.status-pending .form-control[disabled],\r\n.status-pending .form-control[readonly] {\r\n    background-color: #fff3cd !important;\r\n    color: #856404 !important;\r\n    border-color: #ffc107 !important;\r\n    box-shadow: none !important;\r\n}\r\n\r\n/* Success */\r\n.status-success,\r\n.status-success input,\r\n.status-success input[disabled],\r\n.status-success input[readonly],\r\n.status-success input:focus,\r\n.status-success .form-control,\r\n.status-success .form-control:disabled,\r\n.status-success .form-control[disabled],\r\n.status-success .form-control[readonly] {\r\n    background-color: #d4edda !important;\r\n    color: #155724 !important;\r\n    border-color: #28a745 !important;\r\n    box-shadow: none !important;\r\n}\r\n\r\n/* Failed */\r\n.status-failed,\r\n.status-failed input,\r\n.status-failed input[disabled],\r\n.status-failed input[readonly],\r\n.status-failed input:focus,\r\n.status-failed .form-control,\r\n.status-failed .form-control:disabled,\r\n.status-failed .form-control[disabled],\r\n.status-failed .form-control[readonly] {\r\n    background-color: #f8d7da !important;\r\n    color: #721c24 !important;\r\n    border-color: #dc3545 !important;\r\n    box-shadow: none !important;\r\n}"
   },
   "Data": {
     "components": [

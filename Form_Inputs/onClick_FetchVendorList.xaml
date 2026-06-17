@@ -139,7 +139,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="onClick_FetchVendorList" sap:VirtualizedContainerService.HintSize="1841,1477" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="onClick_FetchVendorList" sap:VirtualizedContainerService.HintSize="1178,1477" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="mailMessages" />
       <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="savedAttachments" />
