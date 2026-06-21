@@ -62,6 +62,10 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -139,7 +143,12 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="onClick_FetchVendorList" sap:VirtualizedContainerService.HintSize="1178,1477" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="onClick_FetchVendorList" sap:VirtualizedContainerService.HintSize="1126,1321" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="mailMessages" />
       <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="savedAttachments" />
@@ -152,7 +161,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ufa:FormTriggerActivity x:TypeArguments="ufa:FormInfoTriggerEventArgs" Tag="{x:Null}" DisplayName="Form trigger activity" Enabled="True" Event="click.fetchVendorList" FormId="89d254d9-4e4e-495d-92c3-5e3c491a1a1b" sap:VirtualizedContainerService.HintSize="486,79" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_1" SchedulingMode="Sequential" TriggerId="59f6a142-7057-4df9-b93d-6d63e495e4a9">
+    <ufa:FormTriggerActivity x:TypeArguments="ufa:FormInfoTriggerEventArgs" Tag="{x:Null}" DisplayName="Form trigger activity" Enabled="True" Event="click.fetchVendorList" FormId="89d254d9-4e4e-495d-92c3-5e3c491a1a1b" sap:VirtualizedContainerService.HintSize="452,195" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_1" SchedulingMode="Sequential" TriggerId="59f6a142-7057-4df9-b93d-6d63e495e4a9">
       <ufa:FormTriggerActivity.MessageId>
         <InArgument x:TypeArguments="x:String" />
       </ufa:FormTriggerActivity.MessageId>
@@ -163,7 +172,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ufa:FormTriggerActivity>
-    <Assign sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:IEnumerable(x:String)">[savedAttachments]</OutArgument>
       </Assign.To>
@@ -177,8 +186,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:GetProcesses ContinueOnError="{x:Null}" DisplayName="Get Processes" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="GetProcesses_1" Processes="[allprocessess]" />
-    <Assign sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:GetProcesses ContinueOnError="{x:Null}" DisplayName="Get Processes" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="GetProcesses_1" Processes="[allprocessess]" />
+    <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:Process[]">[outlookprocessess]</OutArgument>
       </Assign.To>
@@ -187,56 +196,78 @@
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <If Condition="[outlookprocessess.Length = 0]" DisplayName="If - Check if outlook is already running or not" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[outlookprocessess.Length = 0]" DisplayName="If - Check if outlook is already running or not" sap:VirtualizedContainerService.HintSize="452,469" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,346" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,222" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE" sap:VirtualizedContainerService.HintSize="416,120" sap2010:WorkflowViewState.IdRef="StartProcess_1" StartType="Asynchronously">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Outlook Process started successfully.&quot;]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+          <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="StartProcess_1" StartType="Asynchronously">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:StartProcess>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Outlook Process started successfully.&quot;]" />
+          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Delay_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Delay>
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Outlook process is already running.&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Outlook process is already running.&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
         </Sequence>
       </If.Else>
     </If>
-    <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+    <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
       <umab:OutlookApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
           </ActivityAction.Argument>
-          <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="400,25" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[Outlook.Folder(&quot;Inbox&quot;)]" NumberOfEmailsLimit="0" UnreadOnly="True" WithAttachmentsOnly="True">
+          <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="502,579" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[Outlook.Folder(&quot;Inbox&quot;)]" NumberOfEmailsLimit="0" UnreadOnly="True" WithAttachmentsOnly="True">
             <umab:ForEachEmailX.Body>
               <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
                 <ActivityAction.Argument1>
@@ -248,14 +279,14 @@
                 <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,314" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <umab:SaveMailAttachmentsX Attachments="[savedAttachments]" DisplayName="Save Email Attachments" ExcludeInlineAttachments="True" FolderPath="C:\Users\Ankit\Downloads\VendorMasterDataExcel\" sap:VirtualizedContainerService.HintSize="434,254" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_1" Message="[CurrentMail]" OverwriteExisting="False">
+                  <umab:SaveMailAttachmentsX Attachments="[savedAttachments]" DisplayName="Save Email Attachments" ExcludeInlineAttachments="True" FolderPath="C:\Users\Ankit\Downloads\VendorFlowExcel\" sap:VirtualizedContainerService.HintSize="434,254" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_1" Message="[CurrentMail]" OverwriteExisting="False">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -285,60 +316,75 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </umab:OutlookApplicationCard>
-    <If Condition="[savedAttachments.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="486,977" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[savedAttachments.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="If_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,813" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,108" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="450,753" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <Sequence sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_14">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[savedAttachments.Count.ToString + &quot; Unread Vendor Master Data Emails found&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[GlobalVariablesNamespace.GlobalVariables.vendorDataTable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="416,227" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[System.Linq.Enumerable.First(savedAttachments)]">
+            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[GlobalVariablesNamespace.GlobalVariables.vendorDataTable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[System.Linq.Enumerable.First(savedAttachments)]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ReadRange>
-            <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" ColumnName="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" Column="[New System.Data.DataColumn(&quot;Status&quot;, GetType(String)) With {.DefaultValue = &quot;&quot;}]" DataTable="[vendorDataTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,221" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
-            <ufa:SetFormFieldsActivity InstanceName="{x:Null}" DisplayName="Set Form Values" FormId="89d254d9-4e4e-495d-92c3-5e3c491a1a1b" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_1">
+            <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" ColumnName="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" Column="[New System.Data.DataColumn(&quot;Status&quot;, GetType(String)) With {.DefaultValue = &quot;&quot;}]" DataTable="[vendorDataTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AddDataColumn>
+            <ufa:SetFormFieldsActivity InstanceName="{x:Null}" DisplayName="Set Form Values" FormId="89d254d9-4e4e-495d-92c3-5e3c491a1a1b" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_1">
               <ufa:SetFormFieldsActivity.Arguments>
                 <InArgument x:TypeArguments="sd1:DataTable" x:Key="vendorDataGrid">[GlobalVariablesNamespace.GlobalVariables.vendorDataTable]</InArgument>
               </ufa:SetFormFieldsActivity.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ufa:SetFormFieldsActivity>
+            <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" Caption="VendorFlow - Success" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Vendor Master Data fetched successfully.&quot;]" TopMost="True">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MessageBox>
           </Sequence>
         </Sequence>
       </If.Then>
@@ -347,24 +393,36 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;No Unread Vendor Master Data Emails found.&quot;]">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;No Unread Vendor Master Data Emails found.&quot;]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
+          <ufa:SetFormFieldsActivity InstanceName="{x:Null}" DisplayName="Set Form Values" FormId="89d254d9-4e4e-495d-92c3-5e3c491a1a1b" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_2">
+            <ufa:SetFormFieldsActivity.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_ErrorMessage">No Unread Vendor Master Data Email found</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_ErrorType">Business</InArgument>
+            </ufa:SetFormFieldsActivity.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ufa:SetFormFieldsActivity>
         </Sequence>
       </If.Else>
     </If>
-    <ufa:BringFormToFrontActivity InstanceName="{x:Null}" DisplayName="Bring Form to Foreground" FormId="89d254d9-4e4e-495d-92c3-5e3c491a1a1b" sap:VirtualizedContainerService.HintSize="486,113" sap2010:WorkflowViewState.IdRef="BringFormToFrontActivity_1">
+    <ufa:BringFormToFrontActivity InstanceName="{x:Null}" DisplayName="Bring Form to Foreground" FormId="89d254d9-4e4e-495d-92c3-5e3c491a1a1b" sap:VirtualizedContainerService.HintSize="452,113" sap2010:WorkflowViewState.IdRef="BringFormToFrontActivity_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
