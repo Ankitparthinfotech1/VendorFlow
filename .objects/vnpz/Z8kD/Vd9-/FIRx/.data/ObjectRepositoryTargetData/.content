@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1L5ETAk5LkW5-Qjn4dSzng" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="0, 0, 850, 542" Guid="39d93566-97e4-424b-a08e-c5e667ec8114" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='NUIDialog' title='Product License Expired' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0fd194f54fe17d876f57a76b05fabb97.jpg" xmlns="">0qIA7UIsau0W1GwPkFdBCaA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">NativeTrigger</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

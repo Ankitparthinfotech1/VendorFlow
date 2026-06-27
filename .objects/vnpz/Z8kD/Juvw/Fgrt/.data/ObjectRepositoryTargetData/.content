@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="_GdqeGCNCkeGIFHHCMAiwg" Reference="t1R5nDm_3EiWiJvQf0Y86g/Fgrt3kgP2Uewe_ISGMdKfw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="809, 1, 34, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;" Guid="de56a09b-4266-4aba-b07a-52edd178e7df" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='NUIDialog' title='Product License Expired' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7e86a7bc48a00cb3b5a45816fbe91ba8.jpg" xmlns="">0rWhPlToB1k2VkurT8DSvtA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -4,10 +4,14 @@
   "description": "UiPath Attended Automation for Vendor Master Data Creation",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.AppleMail.Activities": "[1.0.3]",
+    "UiPath.Excel.Activities": "3.4.1",
     "UiPath.Form.Activities": "[26.4.0]",
+    "UiPath.IntegrationService.Activities": "[1.26.0]",
+    "UiPath.Mail.Activities": "2.7.10",
     "UiPath.System.Activities": "[26.4.1-preview]",
     "UiPath.UIAutomation.Activities": "[26.4.2-preview]",
-    "UiPath.WebAPI.Activities": "[1.16.2]"
+    "UiPath.WebAPI.Activities": "[2.5.0-preview]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -49,6 +53,12 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "bfbfe401-84c1-4a20-8089-9a22b698c853",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Form_Inputs\\onClick_FetchVendorList.xaml",
+      "uniqueId": "6a3ec510-c51f-4da0-866b-4b418b80839e",
       "input": [],
       "output": []
     }

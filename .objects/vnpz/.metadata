@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Inbox - ankit.singh1706@outlook.com - Outlook (Unlicensed Product)",
+  "Type": "App",
+  "Id": "vnpzhoShB0ytWIap4oTLfw",
+  "Reference": "t1R5nDm_3EiWiJvQf0Y86g/vnpzhoShB0ytWIap4oTLfw",
+  "Created": "2026-06-14T05:26:24.5896614Z",
+  "Updated": "2026-06-14T05:26:24.5896614Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.4.2.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,285 @@
+﻿{
+  "Metadata": {
+    "Id": "fd4b6c51-e237-4aa5-ab10-30369434fe53",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "Vendor Flow - Master Data Creation Tool",
+    "Width": 800,
+    "Height": 600,
+    "Theme": "Sandstone",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": "/* Pending */\r\n.status-pending,\r\n.status-pending input,\r\n.status-pending input[disabled],\r\n.status-pending input[readonly],\r\n.status-pending input:focus,\r\n.status-pending .form-control,\r\n.status-pending .form-control:disabled,\r\n.status-pending .form-control[disabled],\r\n.status-pending .form-control[readonly] {\r\n    background-color: #fff3cd !important;\r\n    color: #856404 !important;\r\n    border-color: #ffc107 !important;\r\n    box-shadow: none !important;\r\n}\r\n\r\n/* Success */\r\n.status-success,\r\n.status-success input,\r\n.status-success input[disabled],\r\n.status-success input[readonly],\r\n.status-success input:focus,\r\n.status-success .form-control,\r\n.status-success .form-control:disabled,\r\n.status-success .form-control[disabled],\r\n.status-success .form-control[readonly] {\r\n    background-color: #d4edda !important;\r\n    color: #155724 !important;\r\n    border-color: #28a745 !important;\r\n    box-shadow: none !important;\r\n}\r\n\r\n/* Failed */\r\n.status-failed,\r\n.status-failed input,\r\n.status-failed input[disabled],\r\n.status-failed input[readonly],\r\n.status-failed input:focus,\r\n.status-failed .form-control,\r\n.status-failed .form-control:disabled,\r\n.status-failed .form-control[disabled],\r\n.status-failed .form-control[readonly] {\r\n    background-color: #f8d7da !important;\r\n    color: #721c24 !important;\r\n    border-color: #dc3545 !important;\r\n    box-shadow: none !important;\r\n}"
+  },
+  "Data": {
+    "components": [
+      {
+        "components": [
+          {
+            "tag": "h3",
+            "content": "{{data.logF_BusinessProcessName}}",
+            "key": "logF_BusinessProcessName",
+            "input": false,
+            "label": "Label",
+            "refreshOnChange": true,
+            "tableView": false,
+            "type": "label"
+          },
+          {
+            "content": "{{data.automationDescription}}",
+            "input": false,
+            "key": "automationDescription",
+            "label": "Label",
+            "tableView": false,
+            "tag": "h4",
+            "type": "label"
+          },
+          {
+            "columns": [
+              {
+                "components": [
+                  {
+                    "label": "Fetch Vendor List",
+                    "action": "event",
+                    "showValidations": false,
+                    "theme": "info",
+                    "size": "sm",
+                    "block": true,
+                    "tableView": false,
+                    "key": "fetchVendorList",
+                    "type": "button",
+                    "input": true
+                  }
+                ],
+                "width": 0,
+                "size": "sm",
+                "offset": 0,
+                "push": 0,
+                "pull": 0,
+                "currentWidth": 0
+              },
+              {
+                "components": [
+                  {
+                    "label": "Create Vendors",
+                    "action": "event",
+                    "showValidations": false,
+                    "theme": "info",
+                    "size": "sm",
+                    "tableView": false,
+                    "key": "createVendors",
+                    "type": "button",
+                    "input": true
+                  }
+                ],
+                "width": 2,
+                "size": "sm",
+                "offset": 0,
+                "push": 0,
+                "pull": 0,
+                "currentWidth": 2
+              },
+              {
+                "components": [],
+                "width": 8,
+                "size": "sm",
+                "offset": 0,
+                "push": 0,
+                "pull": 0,
+                "currentWidth": 8
+              },
+              {
+                "attributes": {
+                  "dir": "rtl"
+                },
+                "components": [
+                  {
+                    "label": "Clear",
+                    "action": "event",
+                    "showValidations": false,
+                    "theme": "success",
+                    "size": "sm",
+                    "block": true,
+                    "tableView": false,
+                    "key": "clear",
+                    "type": "button",
+                    "input": true
+                  }
+                ],
+                "width": 1,
+                "size": "sm",
+                "pull": 0,
+                "currentWidth": 1,
+                "offset": 0,
+                "push": 0
+              }
+            ],
+            "autoAdjust": true,
+            "key": "vendorActionColumns",
+            "type": "columns",
+            "input": false,
+            "label": "Columns",
+            "tableView": false,
+            "keyModified": true
+          },
+          {
+            "label": "Select the vendors to be added.",
+            "disableAddingRemovingRows": true,
+            "reorder": false,
+            "addAnotherPosition": "bottom",
+            "layoutFixed": false,
+            "enableRowGroups": false,
+            "initEmpty": false,
+            "customClass": "status-grid",
+            "hideLabel": true,
+            "key": "vendorDataGrid",
+            "type": "datagrid",
+            "components": [
+              {
+                "label": "",
+                "tableView": false,
+                "key": "IsSelected",
+                "type": "checkbox",
+                "input": true,
+                "defaultValue": false
+              },
+              {
+                "label": "Vendor Code",
+                "disabled": true,
+                "tableView": true,
+                "key": "VendorID",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "label": "Vendor Name",
+                "disabled": true,
+                "tableView": true,
+                "key": "VendorName",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "label": "Company Name",
+                "disabled": true,
+                "tableView": true,
+                "key": "CompanyName",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "label": "GSTIN",
+                "disabled": true,
+                "tableView": true,
+                "key": "GSTIN",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "label": "Contact No",
+                "disabled": true,
+                "tableView": true,
+                "key": "ContactNo",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "label": "Email",
+                "disabled": true,
+                "tableView": true,
+                "key": "Email",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "label": "Address",
+                "disabled": true,
+                "tableView": true,
+                "key": "Address",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "label": "City",
+                "disabled": true,
+                "tableView": true,
+                "key": "City",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "label": "Country",
+                "disabled": true,
+                "tableView": true,
+                "key": "Country",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "label": "Status",
+                "customClass": "status-cell",
+                "disabled": true,
+                "tableView": true,
+                "key": "Status",
+                "logic": [
+                  {
+                    "name": "Set Success Color",
+                    "trigger": {
+                      "type": "javascript",
+                      "javascript": "result = row.Status === 'Success';"
+                    },
+                    "actions": [
+                      {
+                        "name": "Apply Success Class",
+                        "type": "mergeComponentSchema",
+                        "schemaDefinition": "{\"customClass\": \"status-success\"}"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Set Failed Color",
+                    "trigger": {
+                      "type": "javascript",
+                      "javascript": "result = row.Status === 'Failed';"
+                    },
+                    "actions": [
+                      {
+                        "name": "Apply Failed Class",
+                        "type": "mergeComponentSchema",
+                        "schemaDefinition": "{\"customClass\": \"status-failed\"}"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Set Pending Color",
+                    "trigger": {
+                      "type": "javascript",
+                      "javascript": "result = row.Status === 'Pending';"
+                    },
+                    "actions": [
+                      {
+                        "name": "Apply Pending Class",
+                        "type": "mergeComponentSchema",
+                        "schemaDefinition": "{\"customClass\": \"status-pending\"}"
+                      }
+                    ]
+                  }
+                ],
+                "type": "textfield",
+                "input": true
+              }
+            ],
+            "input": true,
+            "tableView": false
+          }
+        ],
+        "input": true,
+        "key": "container",
+        "label": "Container",
+        "tableView": false,
+        "type": "container"
+      }
+    ]
+  }
+}
