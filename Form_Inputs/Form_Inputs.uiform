@@ -271,29 +271,20 @@
             "tableView": false
           },
           {
-            "html": "<p>{{data.in_ErrorMessage}}</p>",
-            "label": "Content",
-            "refreshOnChange": true,
-            "key": "content",
-            "type": "content",
-            "input": false,
-            "tableView": false
-          },
-          {
-            "label": "ErrorMessage",
-            "key": "in_ErrorMessage",
+            "label": "MessageText",
+            "key": "in_MessageText",
             "logic": [
               {
                 "name": "Auto Dismiss Error",
                 "trigger": {
                   "type": "javascript",
-                  "javascript": "result = !!data.container.in_ErrorMessage && !instance._dismissTimer;"
+                  "javascript": "result = !!data.container.in_MessageText && !instance._dismissTimer;"
                 },
                 "actions": [
                   {
                     "name": "Schedule Clear",
                     "type": "customAction",
-                    "customAction": "instance._dismissTimer = setTimeout(function(){ instance.setValue(''); instance._dismissTimer = null; }, 5000); value = data.container.in_ErrorMessage;"
+                    "customAction": "instance._dismissTimer = setTimeout(function(){ instance.setValue(''); instance._dismissTimer = null; }, 5000); value = data.container.in_MessageText;"
                   }
                 ]
               }
@@ -303,14 +294,31 @@
             "tableView": false
           },
           {
-            "label": "ErrorType",
-            "key": "in_ErrorType",
+            "label": "MessageType",
+            "key": "in_MessageType",
             "type": "hidden",
             "input": true,
             "tableView": false
           }
         ],
         "input": true,
+        "tableView": false
+      },
+      {
+        "label": "successNotificationBar",
+        "tag": "div",
+        "attrs": [
+          {
+            "attr": "",
+            "value": ""
+          }
+        ],
+        "content": "<div style=\"\r\n    position: fixed;\r\n    left: 0;\r\n    bottom: 36px;\r\n    width: 100%;\r\n    z-index: 1000;\r\n    background-color: #ECFDEA;\r\n    border-top: 2px solid #0DBD26;\r\n    border-bottom: 1px solid #A5EF9A;\r\n    padding: 10px 16px;\r\n    font-size: 13px;\r\n    color: #1CB733;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    box-shadow: 0 -2px 6px rgba(229,57,53,0.15);\r\n    box-sizing: border-box;\r\n\">\r\n    <span> &#9989; {{data.container.in_MessageText}}</span>\r\n</div>",
+        "refreshOnChange": true,
+        "key": "successNotificationBar",
+        "customConditional": "show = !!data.container.in_MessageText && data.container.in_MessageType === 'Success';",
+        "type": "htmlelement",
+        "input": false,
         "tableView": false
       },
       {
@@ -322,10 +330,10 @@
             "value": ""
           }
         ],
-        "content": "<div style=\"\r\n    position: fixed;\r\n    left: 0;\r\n    bottom: 36px;\r\n    width: 100%;\r\n    z-index: 1000;\r\n    background-color: #fdecea;\r\n    border-top: 2px solid #e53935;\r\n    border-bottom: 1px solid #ef9a9a;\r\n    padding: 10px 16px;\r\n    font-size: 13px;\r\n    color: #b71c1c;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    box-shadow: 0 -2px 6px rgba(229,57,53,0.15);\r\n    box-sizing: border-box;\r\n\">\r\n    <span>⚠️ {{data.container.in_ErrorMessage}}</span>\r\n</div>",
+        "content": "<div style=\"\r\n    position: fixed;\r\n    left: 0;\r\n    bottom: 36px;\r\n    width: 100%;\r\n    z-index: 1000;\r\n    background-color: #fdecea;\r\n    border-top: 2px solid #e53935;\r\n    border-bottom: 1px solid #ef9a9a;\r\n    padding: 10px 16px;\r\n    font-size: 13px;\r\n    color: #b71c1c;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    box-shadow: 0 -2px 6px rgba(229,57,53,0.15);\r\n    box-sizing: border-box;\r\n\">\r\n    <span>⚠️ {{data.container.in_MessageText}}</span>\r\n</div>",
         "refreshOnChange": true,
         "key": "errorNotificationBar",
-        "customConditional": "show = !!data.container.in_ErrorMessage;",
+        "customConditional": "show = !!data.container.in_MessageText && (data.container.in_MessageType === 'Error' || data.container.in_MessageType === 'BError');",
         "type": "htmlelement",
         "input": false,
         "tableView": false
